@@ -25,6 +25,8 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
+
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,6 +36,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <!-- Heading in App (Facilities) -->
+            <TextView
+
+                android:id="@+id/facilityHeading"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="30dp"
+
+                android:gravity="center"
+                android:text="@string/mainActivityHeading"
+                android:textColor="@color/red"
+                android:textSize="25sp"
+
+                android:textStyle="bold"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                app:layout_constraintRight_toRightOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
