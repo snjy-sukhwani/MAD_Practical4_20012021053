@@ -27,8 +27,11 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="50dp"
+
+        android:layout_marginBottom="0dp"
+
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,13 +63,14 @@
                 />
 
             <!-- Making Cards for Different Facilities Provided by Us -->
+
             <!-- Material Theme Card For WEB Url -->
             <com.google.android.material.card.MaterialCardView
 
                 android:id="@+id/facilityCard1"
 
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
 
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp"
@@ -141,7 +145,6 @@
                         android:layout_height="wrap_content"
 
                         android:hint="@string/webUrlText"
-                        app:hintTextColor="@color/black"
 
                         app:layout_constraintTop_toBottomOf="@id/WebURLDescription"
                         app:layout_constraintLeft_toLeftOf="parent"
@@ -190,13 +193,13 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Material Theme Card For Call Number -->
+            <!-- Material Theme Card For Phone Call Number -->
             <com.google.android.material.card.MaterialCardView
 
                 android:id="@+id/facilityCard2"
 
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
 
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp"
@@ -204,18 +207,17 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/facilityCard1"
 
-                app:layout_constraintBottom_toBottomOf="parent"
-
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginVertical="15dp"
                 >
 
-                <!-- Heading,TextBox and Button -->
+
+                <!-- Heading,TextBox and Button for Call Phone -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <!-- WEB URL Heading -->
+                    <!-- Call Phone Heading -->
                     <TextView
 
                         android:id="@+id/CallPhoneHeading"
@@ -240,7 +242,7 @@
                         android:layout_marginVertical="5dp"
                         />
 
-                    <!-- WEB URL Description -->
+                    <!-- Call Phone Description -->
                     <TextView
 
                         android:id="@+id/CallPhoneDescription"
@@ -248,7 +250,7 @@
                         app:layout_constraintTop_toBottomOf="@id/CallPhoneHeading"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintBottom_toBottomOf="@id/CallPhoneTextLayout"
+                        app:layout_constraintBottom_toTopOf="@id/CallPhoneTextLayout"
 
 
                         android:layout_width="match_parent"
@@ -264,7 +266,7 @@
                         android:layout_marginVertical="5dp"
                         />
 
-                    <!-- WEB URL EditText TextBox-->
+                    <!-- Call Phone EditText TextBox-->
                     <com.google.android.material.textfield.TextInputLayout
 
                         android:id="@+id/CallPhoneTextLayout"
@@ -273,7 +275,6 @@
                         android:layout_height="wrap_content"
 
                         android:hint="@string/callPhoneHintText"
-                        app:hintTextColor="@color/black"
 
                         app:layout_constraintTop_toBottomOf="@id/CallPhoneDescription"
                         app:layout_constraintLeft_toLeftOf="parent"
@@ -297,7 +298,7 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Browse Website Button -->
+                    <!-- Call Now Button -->
                     <Button
 
                         android:id="@+id/CallPhoneBtn"
@@ -308,6 +309,655 @@
                         android:text="@string/callBtnText"
 
                         app:layout_constraintTop_toBottomOf="@id/CallPhoneTextLayout"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        android:textSize="15sp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Material Theme Card For Contact List -->
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/facilityCard3"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/facilityCard2"
+                app:layout_constraintBottom_toTopOf="@id/facilityCard4"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="15dp"
+                >
+
+                <!-- Heading,TextBox and Button -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Contact List Heading -->
+                    <TextView
+
+                        android:id="@+id/ContactListHeading"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/ContactListDescription"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/contactListText"
+
+                        android:textAllCaps="true"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- Contact List Description -->
+                    <TextView
+
+                        android:id="@+id/ContactListDescription"
+
+                        app:layout_constraintTop_toBottomOf="@id/ContactListHeading"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/ContactListBtn"
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/contactListDescription"
+
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- Contact List EditText TextBox-->
+                    <!--<com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/ContactListTextLayout"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/callPhoneHintText"
+
+                        app:layout_constraintTop_toBottomOf="@id/ContactListDescription"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/ContactListBtn"
+
+                        app:startIconDrawable="@drawable/ic_baseline_contact_phone_24"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/ContactListEditText"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <!-- Find My Contact Button -->
+                    <Button
+
+                        android:id="@+id/ContactListBtn"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/contactListBtnText"
+
+                        app:layout_constraintTop_toBottomOf="@id/ContactListDescription"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        android:textSize="15sp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Material Theme Card For Call Logs -->
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/facilityCard4"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/facilityCard3"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="15dp"
+                >
+
+
+                <!-- Heading,TextBox and Button for Call Logs -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Call Phone Heading -->
+                    <TextView
+
+                        android:id="@+id/CallLogHeading"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/CallLogDescription"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/callLogText"
+
+                        android:textAllCaps="true"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- Call Phone Description -->
+                    <TextView
+
+                        android:id="@+id/CallLogDescription"
+
+                        app:layout_constraintTop_toBottomOf="@id/CallLogHeading"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/CallLogBtn"
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/callLogDescription"
+
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- Call Phone EditText TextBox-->
+                    <!--<com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/CallLogTextLayout"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/callLogHintText"
+
+                        app:layout_constraintTop_toBottomOf="@id/CallLogDescription"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/CallLogBtn"
+
+                        app:startIconDrawable="@drawable/ic_baseline_phone_forwarded_24"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/CallLogEditText"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <!-- Call Now Button -->
+                    <Button
+
+                        android:id="@+id/CallLogBtn"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/callLogBtnText"
+
+                        app:layout_constraintTop_toBottomOf="@id/CallLogDescription"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        android:textSize="15sp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Material Theme Card For Gallery -->
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/facilityCard5"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/facilityCard4"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="15dp"
+                >
+
+
+                <!-- Heading,TextBox and Button for Gallery -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Gallery Heading -->
+                    <TextView
+
+                        android:id="@+id/GalleryHeading"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/GalleryDescription"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/galleryText"
+
+                        android:textAllCaps="true"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- Gallery Description -->
+                    <TextView
+
+                        android:id="@+id/GalleryDescription"
+
+                        app:layout_constraintTop_toBottomOf="@id/GalleryHeading"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/GalleryBtn"
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/galleryDescription"
+
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- Gallery EditText TextBox-->
+                    <!--<com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/GalleryTextLayout"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/galleryHintText"
+
+                        app:layout_constraintTop_toBottomOf="@id/GalleryDescription"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/GalleryBtn"
+
+                        app:startIconDrawable="@drawable/ic_baseline_phone_forwarded_24"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/GalleryEditText"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <!-- Open Gallery Button -->
+                    <Button
+
+                        android:id="@+id/GalleryBtn"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/galleryBtnText"
+
+                        app:layout_constraintTop_toBottomOf="@id/GalleryDescription"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        android:textSize="15sp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Material Theme Card For Camera -->
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/facilityCard6"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/facilityCard5"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="15dp"
+                >
+
+
+                <!-- Heading,TextBox and Button for Gallery -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Gallery Heading -->
+                    <TextView
+
+                        android:id="@+id/CameraHeading"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/CameraDescription"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/cameraText"
+
+                        android:textAllCaps="true"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- Gallery Description -->
+                    <TextView
+
+                        android:id="@+id/CameraDescription"
+
+                        app:layout_constraintTop_toBottomOf="@id/CameraHeading"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/CameraBtn"
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/cameraDescription"
+
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- Gallery EditText TextBox-->
+                    <!--<com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/CameraTextLayout"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/cameraHintText"
+
+                        app:layout_constraintTop_toBottomOf="@id/CameraDescription"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/CameraBtn"
+
+                        app:startIconDrawable="@drawable/ic_baseline_phone_forwarded_24"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/CameraEditText"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <!-- Open Gallery Button -->
+                    <Button
+
+                        android:id="@+id/CameraBtn"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/cameraBtnText"
+
+                        app:layout_constraintTop_toBottomOf="@id/CameraDescription"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        android:textSize="15sp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Material Theme Card For Alarm -->
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/facilityCard7"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/facilityCard6"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="15dp"
+                >
+
+
+                <!-- Heading,TextBox and Button for Gallery -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Gallery Heading -->
+                    <TextView
+
+                        android:id="@+id/AlarmHeading"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/AlarmDescription"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/alarmText"
+
+                        android:textAllCaps="true"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- Gallery Description -->
+                    <TextView
+
+                        android:id="@+id/AlarmDescription"
+
+                        app:layout_constraintTop_toBottomOf="@id/AlarmHeading"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/AlarmBtn"
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/alarmDescription"
+
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- Gallery EditText TextBox-->
+                    <!--<com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/AlarmTextLayout"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/alarmHintText"
+
+                        app:layout_constraintTop_toBottomOf="@id/AlarmDescription"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/AlarmBtn"
+
+                        app:startIconDrawable="@drawable/ic_baseline_phone_forwarded_24"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/AlarmEditText"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <!-- Open Gallery Button -->
+                    <Button
+
+                        android:id="@+id/AlarmBtn"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/alarmBtnText"
+
+                        app:layout_constraintTop_toBottomOf="@id/AlarmDescription"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
