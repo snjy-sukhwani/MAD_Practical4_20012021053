@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="mainActivityTitle"><b>MAD Intent Practical - 20012021053</b></string>
+    <string name="mainActivityHeading">Facilities</string>
 
 </resources>

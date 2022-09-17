@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MAD_Practical4_20012021053</string>
     <string name="mainActivityTitle"><b>MAD Intent Practical - 20012021053</b></string>
+    <string name="mainActivityHeading">Facilities</string>
 </resources>
