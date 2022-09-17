@@ -9,4 +9,20 @@
     <string name="callPhoneDescription">Call anyone From Here, Just Dial any Phone Number in Textbox and To call Press on <b>Call Now</b> Button.</string>
     <string name="callBtnText">Call Now</string>
     <string name="callPhoneHintText">Phone Number</string>
+    <string name="contactListText">Contact Lists</string>
+    <string name="contactListDescription">Find your Contact From Here, Just Press <b>Find My Contact</b> Button.</string>
+    <string name="contactListBtnText">Find Contact Number</string>
+    <string name="callLogText">Contact Logs</string>
+    <string name="callLogDescription">Find Call Logs From Here, Just Press <b>Find Call Logs</b> Button.</string>
+    <string name="callLogHintText">Phone Number</string>
+    <string name="callLogBtnText">Find Call Logs</string>
+    <string name="galleryText">Gallery</string>
+    <string name="galleryDescription">Open your Gallery From Here, Just Press <b>Open Gallery</b> Button.</string>
+    <string name="galleryBtnText">Open Gallery</string>
+    <string name="cameraText">Camera</string>
+    <string name="cameraDescription">Open Your Camera From Here, Just Press <b>Open Camera</b> Button.</string>
+    <string name="cameraBtnText">Open Camera</string>
+    <string name="alarmText">Alarm</string>
+    <string name="alarmDescription">Get all the Alarms you have Set, Just Press <b>Open Alarms</b> Button.</string>
+    <string name="alarmBtnText">Open Alarms</string>
 </resources>
