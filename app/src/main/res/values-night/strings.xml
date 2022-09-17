@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">MAD_Practical4_20012021053</string>
     <string name="mainActivityTitle"><b>MAD Intent Practical - 20012021053</b></string>
     <string name="mainActivityHeading">Facilities</string>
-
+    <string name="webUrlText">Web URL</string>
+    <string name="webUrlDescription">Browse any Website From Here, Just write the URL in Textbox Given Below and Press <b>Browse</b> Button.</string>
+    <string name="BrowseText">Browse Website</string>
+    <string name="callPhoneText">Call Phone Number</string>
+    <string name="callPhoneDescription">Call anyone From Here, Just Dial any Phone Number in Textbox and To call Press on <b>Call Now</b> Button.</string>
+    <string name="callBtnText">Call Now</string>
+    <string name="callPhoneHintText">Phone Number</string>
 </resources>
