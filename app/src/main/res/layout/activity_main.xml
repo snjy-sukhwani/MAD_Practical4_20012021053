@@ -24,9 +24,6 @@
         </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-
-
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -61,6 +58,269 @@
                 app:layout_constraintTop_toTopOf="parent"
 
                 />
+
+            <!-- Making Cards for Different Facilities Provided by Us -->
+            <!-- Material Theme Card For WEB Url -->
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/facilityCard1"
+
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/facilityHeading"
+                app:layout_constraintBottom_toTopOf="@id/facilityCard2"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="15dp"
+                >
+
+                <!-- Heading,TextBox and Button -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- WEB URL Heading -->
+                    <TextView
+
+                        android:id="@+id/WebURLHeading"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/WebURLDescription"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/webUrlText"
+
+                        android:textAllCaps="true"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- WEB URL Description -->
+                    <TextView
+
+                        android:id="@+id/WebURLDescription"
+
+                        app:layout_constraintTop_toBottomOf="@id/WebURLHeading"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/WebURLTextLayout"
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/webUrlDescription"
+
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- WEB URL EditText TextBox-->
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/WebURLTextLayout"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/webUrlText"
+                        app:hintTextColor="@color/black"
+
+                        app:layout_constraintTop_toBottomOf="@id/WebURLDescription"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/webUrlBtn"
+
+                        app:startIconDrawable="@drawable/ic_baseline_website_24"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/WebURLEditText"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Browse Website Button -->
+                    <Button
+
+                        android:id="@+id/webUrlBtn"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/BrowseText"
+
+                        app:layout_constraintTop_toBottomOf="@id/WebURLTextLayout"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        android:textSize="15sp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Material Theme Card For Call Number -->
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/facilityCard2"
+
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/facilityCard1"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="15dp"
+                >
+
+                <!-- Heading,TextBox and Button -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- WEB URL Heading -->
+                    <TextView
+
+                        android:id="@+id/CallPhoneHeading"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/CallPhoneDescription"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/callPhoneText"
+
+                        android:textAllCaps="true"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- WEB URL Description -->
+                    <TextView
+
+                        android:id="@+id/CallPhoneDescription"
+
+                        app:layout_constraintTop_toBottomOf="@id/CallPhoneHeading"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/CallPhoneTextLayout"
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/callPhoneDescription"
+
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="5dp"
+                        />
+
+                    <!-- WEB URL EditText TextBox-->
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/CallPhoneTextLayout"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/callPhoneHintText"
+                        app:hintTextColor="@color/black"
+
+                        app:layout_constraintTop_toBottomOf="@id/CallPhoneDescription"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/CallPhoneBtn"
+
+                        app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/CallPhoneEditText"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Browse Website Button -->
+                    <Button
+
+                        android:id="@+id/CallPhoneBtn"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/callBtnText"
+
+                        app:layout_constraintTop_toBottomOf="@id/CallPhoneTextLayout"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+
+                        android:textSize="15sp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
