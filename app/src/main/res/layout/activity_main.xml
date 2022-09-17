@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="4dp"
 
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -50,7 +50,7 @@
                 android:gravity="center"
                 android:text="@string/mainActivityHeading"
                 android:textColor="@color/red"
-                android:textSize="25sp"
+                android:textSize="30sp"
 
                 android:textStyle="bold"
 
