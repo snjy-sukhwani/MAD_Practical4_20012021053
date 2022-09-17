@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MAD_Practical4_20012021053</string>
-    <string name="mainActivityTitle"><b>MAD Intent Practical - 20012021053</b></string>
+    <string name="mainActivityTitle"><b>Intent Practical - 20012021053</b></string>
     <string name="mainActivityHeading">Facilities</string>
     <string name="webUrlText">Web URL</string>
     <string name="webUrlDescription">Browse any Website From Here, Just write the URL in Textbox Given Below and Press <b>Browse</b> Button.</string>
