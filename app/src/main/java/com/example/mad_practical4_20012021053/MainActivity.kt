@@ -27,53 +27,67 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar (binding.toolbar)
 
+        // When User Clicks on Web Url Button
         binding.webUrlBtn.setOnClickListener {
 
+            // Getting the Website That User Enters in TextBoxs
             val userWebUrl = binding.WebURLEditText.text.toString()
 
-            Toast.makeText(this,"Redirecting you to \"$userWebUrl\"",Toast.LENGTH_LONG).show()
+            val msg1 = Toast.makeText(this,"Redirecting you to \"$userWebUrl\"",Toast.LENGTH_LONG)
+            msg1.show()
 
             if (userWebUrl.startsWith("https://"))
             {
                 Intent(Intent.ACTION_VIEW).setData(Uri.parse(userWebUrl)).apply { startActivity(this) }
             }
             else{
-                Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://$userWebUrl")).apply { startActivity(this) }
+                if(userWebUrl.endsWith(".com") || userWebUrl.endsWith(".in") || userWebUrl.endsWith(".edu")){
+                    Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://$userWebUrl")).apply { startActivity(this) }
+                }
+                else{
+                    Intent(Intent.ACTION_VIEW).setData(Uri.parse(userWebUrl)).apply { startActivity(this) }
+                }
             }
         }
 
+        // When User Clicks on Call Phone Button
         binding.CallPhoneBtn.setOnClickListener{
 
+            // Getting the Phone Number User Enters in the Textbox
             val userCallNow = binding.CallPhoneEditText.text.toString()
 
             if (userCallNow.length==10){
-
-                Toast.makeText(this,"Redirecting you to Your Dialer with $userCallNow Number",Toast.LENGTH_LONG).show()
-
+                val msg1 = Toast.makeText(this,"Redirecting you to Your Dialer with $userCallNow Number",Toast.LENGTH_LONG)
+                msg1.show()
                 Intent(Intent.ACTION_DIAL).setData(Uri.parse("tel:$userCallNow")).apply { startActivity(this) }
             }
-            else
-            {
-                Toast.makeText(this,"Invalid Phone Number",Toast.LENGTH_LONG).show()
+            else{
+                val msg1 = Toast.makeText(this,"Invalid Phone Number",Toast.LENGTH_LONG)
+                msg1.show()
             }
         }
 
+        // When User Clicks on Contact List Button
         binding.ContactListBtn.setOnClickListener {
             Intent(Intent.ACTION_VIEW).setType(ContactsContract.Contacts.CONTENT_TYPE).apply { startActivity(this) }
         }
 
+        // When User Clicks on Call Log Button
         binding.CallLogBtn.setOnClickListener{
             Intent(Intent.ACTION_VIEW).setType(CallLog.Calls.CONTENT_TYPE).apply { startActivity(this) }
         }
 
+        // When User Clicks on Gallery Button
         binding.GalleryBtn.setOnClickListener{
             Intent(Intent.ACTION_VIEW).setType("image/*").apply { startActivity(this) }
         }
 
+        // When User Clicks on Camera Button
         binding.CameraBtn.setOnClickListener{
             Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply { startActivity(this) }
         }
 
+        // When User Clicks on Alarm Button
         binding.AlarmBtn.setOnClickListener{
             Intent(AlarmClock.ACTION_SHOW_ALARMS).apply { startActivity(this) }
         }
