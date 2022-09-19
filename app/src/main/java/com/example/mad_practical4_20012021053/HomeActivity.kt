@@ -43,7 +43,7 @@ class HomeActivity : AppCompatActivity() {
                     Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://$userWebUrl")).apply { startActivity(this) }
                 }
                 else{
-                    Intent(Intent.ACTION_VIEW).setData(Uri.parse(userWebUrl)).apply { startActivity(this) }
+                    Toast.makeText(this,"Invalid URL",Toast.LENGTH_LONG).show()
                 }
             }
         }
