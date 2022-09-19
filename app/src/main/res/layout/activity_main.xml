@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:text="In this, you will get Some facilities which are used in our Daily Life\nWe Will keep Adding New Faclities"
+                android:text="@string/mainActivityDescription"
 
                 android:textSize="25sp"
 
@@ -101,7 +101,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
 
-                android:text="Use Facilities"
+                android:text="@string/facilitiesBtnText"
 
                 android:textSize="23sp"
 
