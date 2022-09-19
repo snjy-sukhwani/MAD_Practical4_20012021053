@@ -1,14 +1,8 @@
 package com.example.mad_practical4_20012021053
 
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.AlarmClock
-import android.provider.CallLog
-import android.provider.ContactsContract
-import android.provider.MediaStore
-import android.util.Log
 import android.widget.Toast
 import androidx.core.view.WindowCompat
 import com.example.mad_practical4_20012021053.databinding.ActivityMainBinding
@@ -25,72 +19,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar (binding.toolbar)
+        setSupportActionBar(binding.toolbar)
 
-        // When User Clicks on Web Url Button
-        binding.webUrlBtn.setOnClickListener {
+        // This will invoked When we Click on "Use Facilities" Button
+        binding.facilityBtn.setOnClickListener {
+            Toast.makeText(this, "Send Button Clicked", Toast.LENGTH_LONG).show()
 
-            // Getting the Website That User Enters in TextBoxs
-            val userWebUrl = binding.WebURLEditText.text.toString()
-
-            val msg1 = Toast.makeText(this,"Redirecting you to \"$userWebUrl\"",Toast.LENGTH_LONG)
-            msg1.show()
-
-            if (userWebUrl.startsWith("https://"))
-            {
-                Intent(Intent.ACTION_VIEW).setData(Uri.parse(userWebUrl)).apply { startActivity(this) }
-            }
-            else{
-                if(userWebUrl.endsWith(".com") || userWebUrl.endsWith(".in") || userWebUrl.endsWith(".edu")){
-                    Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://$userWebUrl")).apply { startActivity(this) }
-                }
-                else{
-                    Intent(Intent.ACTION_VIEW).setData(Uri.parse(userWebUrl)).apply { startActivity(this) }
-                }
-            }
+            // Explicit Intent is Used Here
+            val home = Intent(this, HomeActivity::class.java)
+            startActivity(home)
         }
-
-        // When User Clicks on Call Phone Button
-        binding.CallPhoneBtn.setOnClickListener{
-
-            // Getting the Phone Number User Enters in the Textbox
-            val userCallNow = binding.CallPhoneEditText.text.toString()
-
-            if (userCallNow.length==10){
-                val msg1 = Toast.makeText(this,"Redirecting you to Your Dialer with $userCallNow Number",Toast.LENGTH_LONG)
-                msg1.show()
-                Intent(Intent.ACTION_DIAL).setData(Uri.parse("tel:$userCallNow")).apply { startActivity(this) }
-            }
-            else{
-                val msg1 = Toast.makeText(this,"Invalid Phone Number",Toast.LENGTH_LONG)
-                msg1.show()
-            }
-        }
-
-        // When User Clicks on Contact List Button
-        binding.ContactListBtn.setOnClickListener {
-            Intent(Intent.ACTION_VIEW).setType(ContactsContract.Contacts.CONTENT_TYPE).apply { startActivity(this) }
-        }
-
-        // When User Clicks on Call Log Button
-        binding.CallLogBtn.setOnClickListener{
-            Intent(Intent.ACTION_VIEW).setType(CallLog.Calls.CONTENT_TYPE).apply { startActivity(this) }
-        }
-
-        // When User Clicks on Gallery Button
-        binding.GalleryBtn.setOnClickListener{
-            Intent(Intent.ACTION_VIEW).setType("image/*").apply { startActivity(this) }
-        }
-
-        // When User Clicks on Camera Button
-        binding.CameraBtn.setOnClickListener{
-            Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply { startActivity(this) }
-        }
-
-        // When User Clicks on Alarm Button
-        binding.AlarmBtn.setOnClickListener{
-            Intent(AlarmClock.ACTION_SHOW_ALARMS).apply { startActivity(this) }
-        }
-
     }
 }
