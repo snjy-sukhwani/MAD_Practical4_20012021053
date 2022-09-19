@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         // This will invoked When we Click on "Use Facilities" Button
         binding.facilityBtn.setOnClickListener {
-            Toast.makeText(this, "Send Button Clicked", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "List of Facilities are Loading", Toast.LENGTH_LONG).show()
 
             // Explicit Intent is Used Here
             val home = Intent(this, HomeActivity::class.java)
