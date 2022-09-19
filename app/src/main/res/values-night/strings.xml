@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">MAD_Practical4_20012021053</string>
     <string name="mainActivityTitle"><b>Intent Practical - 20012021053</b></string>
-    <string name="mainActivityHeading">Facilities</string>
+    <string name="mainActivityHeading">Welcome To My Application</string>
     <string name="webUrlText">Web URL</string>
     <string name="webUrlDescription">Browse any Website From Here, Just write the URL in Textbox Given Below and Press <b>Browse</b> Button.</string>
     <string name="BrowseText">Browse Website</string>
@@ -26,4 +26,8 @@
     <string name="alarmText">Alarm</string>
     <string name="alarmDescription">Get all the Alarms you have Set, Just Press <b>Open Alarms</b> Button.</string>
     <string name="alarmBtnText">Open Alarms</string>
+    <string name="homeActivityTitle"><b>Intent Practical - 20012021053</b></string>
+    <string name="homeActivityHeading">Our Facilities</string>
+    <string name="mainActivityDescription">In this, you will get Some facilities which are used in our Daily Life\nWe Will keep Adding New Faclities</string>
+    <string name="facilitiesBtnText">Use Facilities</string>
 </resources>
