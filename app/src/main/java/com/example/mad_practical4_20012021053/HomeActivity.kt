@@ -90,5 +90,17 @@ class HomeActivity : AppCompatActivity() {
             Intent(AlarmClock.ACTION_SHOW_ALARMS).apply { startActivity(this) }
         }
 
+        // For Moving to Another Activity
+        binding.detailsbtn.setOnClickListener {
+            val message1 = binding.WebURLEditText.text.toString()
+            val message2 = binding.CallPhoneEditText.text.toString()
+
+            // Explicit Intent with Data Transfer
+            val transferDetails = Intent(this,DetailsActivity::class.java)
+            transferDetails.putExtra("myMsg1",message1)
+            transferDetails.putExtra("myMsg2",message2)
+            startActivity(transferDetails)
+        }
+
     }
 }
