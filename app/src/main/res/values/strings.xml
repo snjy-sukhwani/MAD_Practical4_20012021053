@@ -29,4 +29,5 @@
     <string name="homeActivityHeading">Our Facilities</string>
     <string name="mainActivityDescription">In this, you will get Some facilities which are used in our Daily Life\nWe Will keep Adding New Faclities</string>
     <string name="facilitiesBtnText">Use Facilities</string>
+    <string name="detailsText">Get Details of Your Input</string>
 </resources>
