@@ -9,11 +9,11 @@ class DetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
 
-        val Data = intent
-        val message1 = intent.getStringExtra("myMsg1")
-        val message2 = intent.getStringExtra("myMsg2")
+        val data = intent
+        val message1 = data.getStringExtra("myMsg1")
+        val message2 = data.getStringExtra("myMsg2")
 
         val myData :TextView = findViewById(R.id.data)
-        myData.text = "Web URL : "+message1+"\n\nPhone Number :"+message2
+        myData.text = "Web URL : $message1\n\nPhone Number :$message2"
     }
 }
